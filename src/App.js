@@ -1,27 +1,46 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
+import DrumData from './components/sound-list.json';
+import DrumDetail from './components/drum-detail';
+//import DrumKeyPad  from './components/drum-keypad';
 import './App.css';
 
+
 class App extends Component {
+  constructor(props){
+    super(props)
+
+   this.state = {
+     display: ''
+   
+    
+   }
+  }
+    
+
+handleDisplay = display =>this.setState ({display})
+
+
+
   render() {
+  
     return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
-      </div>
-    );
+      <div className='App' id='drum-machine'>
+      <h2>Drum Machine</h2>
+<div id='main'>
+  {DrumData.map(drumList => 
+  { return <DrumDetail  
+  drum={drumList} 
+  key={`${drumList.keyCode}`}
+ handleDisplayCallBack={this.handleDisplay}
+    
+  />
+
+   })}
+  
+</div>
+<div id='display'>{this.state.display}</div>
+</div>
+    )
   }
 }
 
