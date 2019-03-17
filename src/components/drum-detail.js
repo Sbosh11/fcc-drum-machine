@@ -10,7 +10,7 @@ constructor(props){
     this.handleKeyClicked = this.handleKeyClicked.bind(this);
 }
 
- // change code below this line
+
  componentDidMount() {
     document.addEventListener('keydown', this.handleKeyClicked);
   }

@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import DrumData from './components/sound-list.json';
 import DrumDetail from './components/drum-detail';
-//import DrumKeyPad  from './components/drum-keypad';
 import './App.css';
 
 
