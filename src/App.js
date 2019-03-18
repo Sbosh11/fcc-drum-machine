@@ -24,7 +24,7 @@ handleDisplay = display =>this.setState ({display})
   
     return (
       <div className='App' id='drum-machine'>
-      <h2>Drum Machine</h2>
+      <h3>Drum Machine</h3>
 <div id='main'>
   {DrumData.map(drumList => 
   { return <DrumDetail  
@@ -37,7 +37,8 @@ handleDisplay = display =>this.setState ({display})
    })}
   
 </div>
-<div id='display'>{this.state.display}</div>
+<h4 id='display'>{this.state.display}</h4>
+<p id='author'>Coded by Sibongile Thanjekwayo</p>
 </div>
     )
   }
